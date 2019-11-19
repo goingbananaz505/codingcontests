@@ -70,6 +70,7 @@
 		1C03216D2379CA13000D95BA /* solution.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = solution.h; sourceTree = "<group>"; };
 		1CED5CE02379AE57007E9D8B /* LCW162_1252_Cells */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = LCW162_1252_Cells; sourceTree = BUILT_PRODUCTS_DIR; };
 		1CED5CE22379AE57007E9D8B /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		1CEECAEF2383D90E004A99DE /* consoleutils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = consoleutils.h; sourceTree = "<group>"; };
 		1CEECAF42383DB44004A99DE /* CFR600_1253A_Single */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = CFR600_1253A_Single; sourceTree = BUILT_PRODUCTS_DIR; };
 		1CEECAF62383DB44004A99DE /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		1CEECAFF2383E552004A99DE /* CFR600_1253B_Silly */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = CFR600_1253B_Silly; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -140,6 +141,7 @@
 				1C03215C2379BE9B000D95BA /* LCW162_1253_Reconstruct */,
 				1CEECAF52383DB44004A99DE /* CFR600_1253A_Single */,
 				1CEECB002383E553004A99DE /* CFR600_1253B_Silly */,
+				1CEECAEE2383D8E2004A99DE /* Utils */,
 				1CED5CD32379ADBE007E9D8B /* Products */,
 			);
 			sourceTree = "<group>";
@@ -162,6 +164,14 @@
 				1CED5CE22379AE57007E9D8B /* main.cpp */,
 			);
 			path = LCW162_1252_Cells;
+			sourceTree = "<group>";
+		};
+		1CEECAEE2383D8E2004A99DE /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				1CEECAEF2383D90E004A99DE /* consoleutils.h */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		1CEECAF52383DB44004A99DE /* CFR600_1253A_Single */ = {

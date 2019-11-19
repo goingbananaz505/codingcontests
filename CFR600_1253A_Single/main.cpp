@@ -1,27 +1,18 @@
 #include <iostream>
 #include <vector>
+#include "consoleutils.h"
 
 using namespace std;
+namespace cu = consoleutils;
 
-void runTest(int id) {
-    int N; cin >> N;
-    vector<int> A(N);
-    for(int i = 0; i < N; i++) {
-        cin >> A[i];
-    }
-    vector<int> B(N);
-    for(int i = 0; i < N; i++) {
-        cin >> B[i];
-    }
-    
+bool isSinglePushPossible(const vector<int>& A, const vector<int>& B) {
     bool isBeforeKInterval = true;
     bool isAfterKInterval = false;
     int KValue = 0;
-    for(int i = 0; i < N; i++) {
+    for(int i = 0; i < A.size(); i++) {
         int diff = B[i] - A[i];
         if(diff < 0) {
-            cout << "NO" << endl;
-            return;
+            return false;
         }
         
         bool isInKInterval = !isBeforeKInterval && !isAfterKInterval;
@@ -34,27 +25,31 @@ void runTest(int id) {
         
         if(isInKInterval && diff != KValue) {
             if(diff != 0) {
-                cout << "NO" << endl;
-                return;
+                return false;
             }
             isAfterKInterval = true;
             continue;
         }
         
         if(isAfterKInterval && diff != 0) {
-            cout << "NO" << endl;
-            return;
+            return false;
         }
     }
     
-    cout << "YES" << endl;
+    return true;
 }
-
+ 
 int main() {
-    int T; cin >> T;
-    for(int t = 0; t < T; t++) {
-        runTest(t);
-    }
-    
+    cu::runOverMultipleTestsInput([](const int testId) {
+        int N = cu::read<int>();
+        vector<int> A = cu::readArray<int>(N);
+        vector<int> B = cu::readArray<int>(N);
+        
+        if(isSinglePushPossible(A, B)) {
+            cout << "YES" << endl;
+        } else {
+            cout << "NO" << endl;
+        }
+    });
     return 0;
 }
