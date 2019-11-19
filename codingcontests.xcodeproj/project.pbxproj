@@ -47,6 +47,7 @@
 		1C03215D2379BE9B000D95BA /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		1C0321662379C247000D95BA /* LCW160_1237_Find */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = LCW160_1237_Find; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C0321682379C247000D95BA /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		1C03216D2379CA13000D95BA /* solution.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = solution.h; sourceTree = "<group>"; };
 		1CED5CE02379AE57007E9D8B /* LCW162_1252_Cells */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = LCW162_1252_Cells; sourceTree = BUILT_PRODUCTS_DIR; };
 		1CED5CE22379AE57007E9D8B /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
