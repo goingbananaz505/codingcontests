@@ -26,12 +26,8 @@ public:
 private:
     bool isValidDayStartingFromIndex(const std::vector<int>& events, const int startIndex,
                                      int& eventsCountToday) {
-        eventsCountToday = getMinimumNumberOfEventsFromIndex(events, startIndex);
-        return (eventsCountToday != 0);
-    }
-    
-    int getMinimumNumberOfEventsFromIndex(const std::vector<int>& events, const int startIndex) {
-        const int invalidDayStartsAtGivenIndex = 0;
+        eventsCountToday = 0;
+        
         int index = startIndex;
         std::unordered_set<int> uniqueEmployeesIdsSeenToday;
         std::unordered_set<int> employeesInTheOfficeAtThisTime;
@@ -46,20 +42,21 @@ private:
             
             if(isInEvent) {
                 if(isEmployeeAlreadyIn) {
-                    return invalidDayStartsAtGivenIndex;
+                    return false;
                 }
                 employeesInTheOfficeAtThisTime.insert(employeeId);
                 uniqueEmployeesIdsSeenToday.insert(employeeId);
             } else if(isOutEvent) {
                 if(!isEmployeeAlreadyIn) {
-                    return invalidDayStartsAtGivenIndex;
+                    return false;
                 }
                 employeesInTheOfficeAtThisTime.erase(employeeId);
             }
             
             bool isOfficeEmpty = (employeesInTheOfficeAtThisTime.size() == 0);
             if(isOfficeEmpty) {
-                return index - startIndex + 1;
+                eventsCountToday = index - startIndex + 1;
+                return true;
             }
             
             index++;
@@ -67,9 +64,10 @@ private:
         
         bool isOfficeEmpty = (employeesInTheOfficeAtThisTime.size() == 0);
         if(isOfficeEmpty) {
-            return index - startIndex + 1;
+            eventsCountToday = index - startIndex + 1;
+            return true;
         }
-        return invalidDayStartsAtGivenIndex;
+        return false;
     }
 };
 
