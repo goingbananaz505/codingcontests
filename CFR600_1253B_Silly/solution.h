@@ -25,39 +25,45 @@ public:
     
 private:
     int getMinimumNumberOfEventsFromIndex(const std::vector<int>& events, const int startIndex) {
+        const int invalidDayStartsAtGivenIndex = 0;
         int index = startIndex;
         std::unordered_set<int> uniqueEmployeesIdsSeenToday;
         std::unordered_set<int> employeesInTheOfficeAtThisTime;
         while(index < events.size()) {
             int value = events[index];
             
-            if(value > 0) {
-                bool alreadySeenValue = (uniqueEmployeesIdsSeenToday.find(value) != uniqueEmployeesIdsSeenToday.end());
-                if(alreadySeenValue) {
-                    return 0;
+            bool isInEvent = (value > 0);
+            bool isOutEvent = (value < 0);
+            int employeeId = abs(value);
+
+            bool isEmployeeAlreadyIn = (uniqueEmployeesIdsSeenToday.find(employeeId) != uniqueEmployeesIdsSeenToday.end());
+            
+            if(isInEvent) {
+                if(isEmployeeAlreadyIn) {
+                    return invalidDayStartsAtGivenIndex;
                 }
-                employeesInTheOfficeAtThisTime.insert(value);
-                uniqueEmployeesIdsSeenToday.insert(value);
-            } else if(value < 0) {
-                bool seenEntrance = (uniqueEmployeesIdsSeenToday.find(-1 * value) != uniqueEmployeesIdsSeenToday.end());
-                if(!seenEntrance) {
-                    return 0;
+                employeesInTheOfficeAtThisTime.insert(employeeId);
+                uniqueEmployeesIdsSeenToday.insert(employeeId);
+            } else if(isOutEvent) {
+                if(!isEmployeeAlreadyIn) {
+                    return invalidDayStartsAtGivenIndex;
                 }
-                employeesInTheOfficeAtThisTime.erase(-1 * value);
+                employeesInTheOfficeAtThisTime.erase(employeeId);
             }
             
-            if(employeesInTheOfficeAtThisTime.size() == 0) {
+            bool isOfficeEmpty = (employeesInTheOfficeAtThisTime.size() == 0);
+            if(isOfficeEmpty) {
                 return index - startIndex + 1;
             }
             
             index++;
         }
         
-
-        if(employeesInTheOfficeAtThisTime.size() == 0) {
+        bool isOfficeEmpty = (employeesInTheOfficeAtThisTime.size() == 0);
+        if(isOfficeEmpty) {
             return index - startIndex + 1;
         }
-        return 0;
+        return invalidDayStartsAtGivenIndex;
     }
 };
 
