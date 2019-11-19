@@ -10,8 +10,8 @@ public:
         std::vector<int> numberOfEvents;
         int startDayIndex = 0;
         while(startDayIndex < events.size()) {
-            int eventsFromIndex = getMinimumNumberOfEventsFromIndex(events, startDayIndex);
-            bool isPartitionPossible = (eventsFromIndex != 0);
+            int eventsFromIndex = 0;
+            bool isPartitionPossible = isValidDayStartingFromIndex(events, startDayIndex, eventsFromIndex);
             if(!isPartitionPossible) {
                 std::vector<int> emptyArray;
                 return emptyArray;
@@ -24,6 +24,12 @@ public:
     }
     
 private:
+    bool isValidDayStartingFromIndex(const std::vector<int>& events, const int startIndex,
+                                     int& eventsCountToday) {
+        eventsCountToday = getMinimumNumberOfEventsFromIndex(events, startIndex);
+        return (eventsCountToday != 0);
+    }
+    
     int getMinimumNumberOfEventsFromIndex(const std::vector<int>& events, const int startIndex) {
         const int invalidDayStartsAtGivenIndex = 0;
         int index = startIndex;
