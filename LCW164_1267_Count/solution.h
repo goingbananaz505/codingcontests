@@ -2,16 +2,19 @@
 #define solution_h
 
 #include <vector>
+#include "datautils.h"
+
+namespace du = datautils;
 
 class Solution {
 public:
-    int countServers(std::vector<std::vector<int>>& grid) const {
+    int countServers(du::matrix<int>& grid) const {
         std::vector<int> sumOnLines = getSumOnLines(grid);
         std::vector<int> sumOnColumns = getSumOnColumns(grid);
         return getCellsCountWithBothSumsOne(grid, sumOnLines, sumOnColumns);
     }
 private:
-    std::vector<int> getSumOnLines(const std::vector<std::vector<int>>& grid) const {
+    std::vector<int> getSumOnLines(const du::matrix<int>& grid) const {
         std::vector<int> sum(grid.size(), 0);
         for(int i = 0; i < grid.size(); i++) {
             for(int j = 0; j < grid[0].size(); j++) {
@@ -20,7 +23,7 @@ private:
         }
         return sum;
     }
-    std::vector<int> getSumOnColumns(const std::vector<std::vector<int>>& grid) const {
+    std::vector<int> getSumOnColumns(const du::matrix<int>& grid) const {
         std::vector<int> sum(grid[0].size(), 0);
         for(int i = 0; i < grid.size(); i++) {
             for(int j = 0; j < grid[0].size(); j++) {
@@ -29,7 +32,7 @@ private:
         }
         return sum;
     }
-    int getCellsCountWithBothSumsOne(const std::vector<std::vector<int>>& grid,
+    int getCellsCountWithBothSumsOne(const du::matrix<int>& grid,
                                      std::vector<int> sumOnLines,
                                      std::vector<int> sumOnColumns) const {
         int count = 0;

@@ -219,6 +219,7 @@
 		1C72D004238D7EE900EB7D35 /* LCW163_1262_Greatest */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = LCW163_1262_Greatest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C72D006238D7EE900EB7D35 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		1C72D00B238D7EF900EB7D35 /* solution.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = solution.h; sourceTree = "<group>"; };
+		1C72D00C238D84B100EB7D35 /* datautils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = datautils.h; sourceTree = "<group>"; };
 		1CD627D2238A6EC4003AD2B6 /* CFR602_1262A_Math */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = CFR602_1262A_Math; sourceTree = BUILT_PRODUCTS_DIR; };
 		1CD627D4238A6EC5003AD2B6 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		1CD627DD238A6ED1003AD2B6 /* CFR602_1262B_Box */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = CFR602_1262B_Box; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -530,6 +531,7 @@
 		1CEECAEE2383D8E2004A99DE /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				1C72D00C238D84B100EB7D35 /* datautils.h */,
 				1CEECAEF2383D90E004A99DE /* consoleutils.h */,
 			);
 			path = Utils;

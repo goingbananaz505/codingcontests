@@ -3,11 +3,13 @@
 
 #include <vector>
 #include <string>
+#include "datautils.h"
+
+namespace du = datautils;
 
 class Solution {
 public:
-    void updateMapByAssigningChickens(std::vector<std::vector<char>>& map,
-                                      const int chickensNumber) {
+    void updateMapByAssigningChickens(du::matrix<char>& map, const int chickensNumber) {
         this->currentChickenIdIndex = 0;
         this->currentAssignmentPosition = std::make_pair(0, 0);
         this->rowsCount = static_cast<int>(map.size());
@@ -29,7 +31,7 @@ private:
     std::pair<int, int> currentAssignmentPosition;
     int currentChickenIdIndex;
     
-    int getNumberOfRiceCells(const std::vector<std::vector<char>>& map) const {
+    int getNumberOfRiceCells(const du::matrix<char>& map) const {
         int count = 0;
         for(int i = 0; i < rowsCount; i++) {
             for(int j = 0; j < columnsCount; j++) {
@@ -42,7 +44,7 @@ private:
         return count;
     }
     
-    void assignChickensLineByLineAlternatingDirection(std::vector<std::vector<char>>& map,
+    void assignChickensLineByLineAlternatingDirection(du::matrix<char>& map,
                                                       const int chickensNumber,
                                                       const int numberOfRiceEachChicken) {
         if(chickensNumber == 0) { return; }

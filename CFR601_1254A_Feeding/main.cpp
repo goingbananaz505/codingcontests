@@ -1,10 +1,12 @@
 #include <iostream>
 #include <vector>
 #include "consoleutils.h"
+#include "datautils.h"
 #include "solution.h"
 
 using namespace std;
 namespace cu = consoleutils;
+namespace du = datautils;
 Solution solution;
 
 int main() {
@@ -12,7 +14,7 @@ int main() {
         int r = cu::read<int>();
         int c = cu::read<int>();
         int k = cu::read<int>();
-        vector<vector<char>> map(r);
+        du::matrix<char> map(r);
         for(int i = 0; i < r; i++) {
             map[i] = cu::readArray<char>(c);
         }

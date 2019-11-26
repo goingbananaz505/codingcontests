@@ -1,12 +1,14 @@
 #include <iostream>
 #include <vector>
 #include "solution.h"
+#include "datautils.h"
 
 using namespace std;
+namespace du = datautils;
 Solution s;
 
 int main() {
-    vector<vector<int>> grid = {
+    du::matrix<int> grid = {
         { 1, 2, 3 },
         { 4, 5, 6 },
         { 7, 8, 9 }
