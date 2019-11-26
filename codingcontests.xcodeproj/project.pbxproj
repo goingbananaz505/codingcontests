@@ -98,7 +98,7 @@
 		1CEECB062383F578004A99DE /* solution.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = solution.h; sourceTree = "<group>"; };
 		1CEECB0B238433B8004A99DE /* CFR601_1255A_Changing */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = CFR601_1255A_Changing; sourceTree = BUILT_PRODUCTS_DIR; };
 		1CEECB0D238433B8004A99DE /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
-		1CEECB2C238433F1004A99DE /* CFR601_1255D */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = CFR601_1255D; sourceTree = BUILT_PRODUCTS_DIR; };
+		1CEECB2C238433F1004A99DE /* CFR601_1254A_Feeding */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = CFR601_1254A_Feeding; sourceTree = BUILT_PRODUCTS_DIR; };
 		1CEECB2E238433F1004A99DE /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		1CEECB342386C3B2004A99DE /* solution.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = solution.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -196,8 +196,8 @@
 				1C0321662379C247000D95BA /* LCW160_1237_Find */,
 				1CEECAF42383DB44004A99DE /* CFR600_1253A_Single */,
 				1CEECAFF2383E552004A99DE /* CFR600_1253B_Silly */,
-				1CEECB2C238433F1004A99DE /* CFR601_1255D */,
 				1CEECB0B238433B8004A99DE /* CFR601_1255A_Changing */,
+				1CEECB2C238433F1004A99DE /* CFR601_1254A_Feeding */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -341,7 +341,6 @@
 			productReference = 1CEECAFF2383E552004A99DE /* CFR600_1253B_Silly */;
 			productType = "com.apple.product-type.tool";
 		};
-		1CEECB2B238433F1004A99DE /* CFR601_1255D */ = {
 		1CEECB0A238433B8004A99DE /* CFR601_1255A_Changing */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1CEECB0F238433B8004A99DE /* Build configuration list for PBXNativeTarget "CFR601_1255A_Changing" */;
@@ -360,7 +359,9 @@
 			productType = "com.apple.product-type.tool";
 		};
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1CEECB30238433F1004A99DE /* Build configuration list for PBXNativeTarget "CFR601_1255D" */;
+		1CEECB2B238433F1004A99DE /* CFR601_1254A_Feeding */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1CEECB30238433F1004A99DE /* Build configuration list for PBXNativeTarget "CFR601_1254A_Feeding" */;
 			buildPhases = (
 				1CEECB28238433F1004A99DE /* Sources */,
 				1CEECB29238433F1004A99DE /* Frameworks */,
@@ -370,9 +371,9 @@
 			);
 			dependencies = (
 			);
-			name = CFR601_1255D;
+			name = CFR601_1254A_Feeding;
 			productName = CFR601_1255D;
-			productReference = 1CEECB2C238433F1004A99DE /* CFR601_1255D */;
+			productReference = 1CEECB2C238433F1004A99DE /* CFR601_1254A_Feeding */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
@@ -425,7 +426,7 @@
 				1C0321652379C247000D95BA /* LCW160_1237_Find */,
 				1CEECAF32383DB44004A99DE /* CFR600_1253A_Single */,
 				1CEECAFE2383E552004A99DE /* CFR600_1253B_Silly */,
-				1CEECB2B238433F1004A99DE /* CFR601_1255D */,
+				1CEECB2B238433F1004A99DE /* CFR601_1254A_Feeding */,
 				1CEECB0A238433B8004A99DE /* CFR601_1255A_Changing */,
 			);
 		};
@@ -806,7 +807,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1CEECB30238433F1004A99DE /* Build configuration list for PBXNativeTarget "CFR601_1255D" */ = {
+		1CEECB30238433F1004A99DE /* Build configuration list for PBXNativeTarget "CFR601_1254A_Feeding" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1CEECB31238433F1004A99DE /* Debug */,

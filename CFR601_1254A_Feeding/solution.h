@@ -8,9 +8,8 @@ class Solution {
 public:
     void updateMapByAssigningChickens(std::vector<std::vector<char>>& map,
                                       const int chickensNumber) {
-        this->currentI = 0;
-        this->currentJ = 0;
         this->currentChickenIdIndex = 0;
+        this->currentAssignmentPosition = std::make_pair(0, 0);
         this->rowsCount = static_cast<int>(map.size());
         this->columnsCount = static_cast<int>(map[0].size());
         
@@ -24,12 +23,11 @@ public:
     }
 private:
     const std::string chickenIds = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+    
     int rowsCount;
     int columnsCount;
-    
-    int currentI = 0;
-    int currentJ = 0;
-    int currentChickenIdIndex = 0;
+    std::pair<int, int> currentAssignmentPosition;
+    int currentChickenIdIndex;
     
     int getNumberOfRiceCells(const std::vector<std::vector<char>>& map) const {
         int count = 0;
@@ -52,38 +50,73 @@ private:
         int riceCount = 0;
         int fedChickens = 0;
         bool finishedFeedingChickens = false;
-        for(int i = currentI; i < this->rowsCount; i++) {
-            int jDirection = getDirectionForJ(i % 2 == 0);
-            int jStart = getStartingValueForJ(i == currentI, i % 2 == 0);
-            
-            for(int j = jStart; (j >= 0 && j < this->columnsCount); j += jDirection) {
-                bool cellContainsRice = (map[i][j] == 'R');
-                if(cellContainsRice) {
-                    riceCount++;
-                    if(riceCount > numberOfRiceEachChicken) {
-                        riceCount = 1;
-                        fedChickens++;
-                        currentChickenIdIndex++;
-                        finishedFeedingChickens = (fedChickens == chickensNumber);
-                        if(finishedFeedingChickens) {
-                            currentI = i;
-                            currentJ = j;
-                            break;
-                        }
+        
+        int i = currentAssignmentPosition.first;
+        int j = currentAssignmentPosition.second;
+        while(true) {
+            bool cellContainsRice = (map[i][j] == 'R');
+            if(cellContainsRice) {
+                riceCount++;
+                if(riceCount > numberOfRiceEachChicken) {
+                    riceCount = 1;
+                    fedChickens++;
+                    currentChickenIdIndex++;
+                    finishedFeedingChickens = (fedChickens == chickensNumber);
+                    if(finishedFeedingChickens) {
+                        currentAssignmentPosition = std::make_pair(i, j);
+                        break;
                     }
                 }
-                map[i][j] = chickenIds[currentChickenIdIndex];
             }
+            map[i][j] = chickenIds[currentChickenIdIndex];
             
-            if(fedChickens == chickensNumber) {
+            if(hasNextPosition(i, j)) {
+                advancePosition(i, j);
+            } else {
                 break;
             }
         }
     }
+    bool hasNextPosition(const int i, const int j) const {
+        bool isPositionOnLastRow = (i == this->rowsCount - 1);
+        
+        if(!isPositionOnLastRow) {
+            return true;
+        }
+        else {
+            int direction = getDirectionForJ(i);
+            if(direction == -1 && j == 0) {
+                return false;
+            }
+            if(direction == 1 && (j == this->columnsCount - 1)) {
+                return false;
+            }
+            return true;
+        }
+    }
+    void advancePosition(int& i, int& j) const {
+        int direction = getDirectionForJ(i);
+        if(direction == -1) {
+            if(j == 0) {
+                i++;
+            } else {
+                j--;
+            }
+        }
+        if(direction == 1) {
+            if(j == this->columnsCount - 1) {
+                i++;
+            } else {
+                j++;
+            }
+        }
+    }
     
-    int getStartingValueForJ(const bool isFirstRowIterated, const bool isEvenRow) const {
+    int getStartingValueForJ(const int i) const {
+        bool isFirstRowIterated = (i == this->currentAssignmentPosition.first);
+        bool isEvenRow = (i % 2 == 0);
         if(isFirstRowIterated) {
-            return currentJ;
+            return this->currentAssignmentPosition.second;
         }
         
         if(isEvenRow) {
@@ -92,7 +125,8 @@ private:
             return columnsCount - 1;
         }
     }
-    int getDirectionForJ(const bool isEvenRow) const {
+    int getDirectionForJ(const int i) const {
+        bool isEvenRow = (i % 2 == 0);
         if(isEvenRow) {
             return 1;
         } else {
