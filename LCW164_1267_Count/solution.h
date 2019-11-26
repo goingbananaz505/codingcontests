@@ -8,7 +8,7 @@ namespace du = datautils;
 
 class Solution {
 public:
-    int countServers(du::matrix<int>& grid) const {
+    int countServers(const du::matrix<int>& grid) const {
         std::vector<int> sumOnLines = getSumOnLines(grid);
         std::vector<int> sumOnColumns = getSumOnColumns(grid);
         return getCellsCountWithBothSumsOne(grid, sumOnLines, sumOnColumns);
@@ -33,8 +33,8 @@ private:
         return sum;
     }
     int getCellsCountWithBothSumsOne(const du::matrix<int>& grid,
-                                     std::vector<int> sumOnLines,
-                                     std::vector<int> sumOnColumns) const {
+                                     const std::vector<int> sumOnLines,
+                                     const std::vector<int> sumOnColumns) const {
         int count = 0;
         for(int i = 0; i < grid.size(); i++) {
             for(int j = 0; j < grid[0].size(); j++) {

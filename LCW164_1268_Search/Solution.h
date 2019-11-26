@@ -6,8 +6,8 @@
 
 class Solution {
 public:
-    std::vector<std::vector<std::string>> suggestedProducts(std::vector<std::string>& products,
-                                                       std::string searchWord) {
+    std::vector<std::vector<std::string>> suggestedProducts(const std::vector<std::string>& products,
+                                                            const std::string& searchWord) {
         TrieNode* trie = buildTrieFromDictionary(products);
         return getMaximumThreeSuggestions(trie, searchWord);
     }
@@ -18,7 +18,7 @@ private:
         int wordsEndingHere;
     };
     
-    TrieNode* getNode() {
+    TrieNode* getNode() const {
         struct TrieNode *pNode = new TrieNode;
       
         pNode->wordsEndingHere = 0;
@@ -28,7 +28,7 @@ private:
       
         return pNode;
     }
-    void insert(struct TrieNode* root, const std::string& key) {
+    void insert(TrieNode* root, const std::string& key) const {
         TrieNode *pCrawl = root;
       
         for (int i = 0; i < key.length(); i++) {
@@ -42,7 +42,7 @@ private:
         pCrawl->wordsEndingHere++;
     }
     
-    TrieNode* buildTrieFromDictionary(const std::vector<std::string>& keys) {
+    TrieNode* buildTrieFromDictionary(const std::vector<std::string>& keys) const {
         TrieNode* root = getNode();
         for (int i = 0; i < keys.size(); i++)
             this->insert(root, keys[i]);
@@ -50,7 +50,7 @@ private:
     }
     
     std::vector<std::vector<std::string>> getMaximumThreeSuggestions(TrieNode* root,
-                                                                    const std::string& word) {
+                                                                    const std::string& word) const {
         std::vector<std::vector<std::string>> result(word.size());
         
         TrieNode* pCrawl = root;
@@ -67,14 +67,14 @@ private:
         return result;
     }
     
-    std::vector<std::string> getMaxThreeFromNode(const TrieNode* node, const std::string& word) {
+    std::vector<std::string> getMaxThreeFromNode(const TrieNode* node, const std::string& word) const {
         std::vector<std::string> result;
         dfs(node, word, result);
         
         return result;
     }
     
-    void dfs(const TrieNode* node, const std::string& partial, std::vector<std::string>& result) {
+    void dfs(const TrieNode* node, const std::string& partial, std::vector<std::string>& result) const {
         if(result.size() >= 3) {
             return;
         }

@@ -7,8 +7,8 @@
 class Solution {
 public:
     int getCostPrivatizingFridges(const std::vector<int>& weights,
-                                  int numberOfChains,
-                                  std::vector<std::pair<int, int>>& edges) {
+                                  const int numberOfChains,
+                                  std::vector<std::pair<int, int>>& edges) const {
         if(numberOfChains < weights.size()) {
             return -1;
         }

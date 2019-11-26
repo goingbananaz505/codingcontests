@@ -3,7 +3,7 @@
 
 class Solution {
 public:
-    int getMinimumNumberOfPresses(int left, int right) {
+    int getMinimumNumberOfPresses(const int left, const int right) const {
         if(left == right) {
             return 0;
         }

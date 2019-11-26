@@ -6,7 +6,7 @@
 
 class Solution {
 public:
-    std::vector<int> getOriginalPermutation(std::vector<std::vector<int>> tuples) {
+    std::vector<int> getOriginalPermutation(const std::vector<std::vector<int>> tuples) const {
         std::vector<int> permutation(tuples.size() + 2);
         
         PermutationFinder pf(tuples);
@@ -20,12 +20,12 @@ public:
 private:
     class PermutationFinder {
     public:
-        PermutationFinder(std::vector<std::vector<int>>& tuples) {
+        PermutationFinder(const std::vector<std::vector<int>>& tuples) {
             this->tuples = tuples;
             normalizeTuples();
         }
         void normalizeTuples() {
-            for(auto& tuple : tuples) {
+            for(auto& tuple : this->tuples) {
                 for(int& e : tuple) {
                     e--;
                 }
@@ -74,7 +74,7 @@ private:
             }
             return -1;
         }
-        std::vector<int> getFirstOrderedTupleByIndex(int index) const {
+        std::vector<int> getFirstOrderedTupleByIndex(const int index) const {
             std::vector<int> tuple = tuples[index];
             sort(tuple.begin(), tuple.end(), [&](const int a, const int b) -> bool
             {
@@ -83,7 +83,7 @@ private:
             
             return tuple;
         }
-        std::vector<int> getOrderedTupleByIndex(int index) const {
+        std::vector<int> getOrderedTupleByIndex(const int index) const {
             std::vector<int> tuple(3);
             tuple[0] = currentThreeSizedTuple[1];
             tuple[1] = currentThreeSizedTuple[2];
@@ -97,7 +97,7 @@ private:
             
             return tuple;
         }
-        void updateSearchContextByFindingTupleIndex(int index) {
+        void updateSearchContextByFindingTupleIndex(const int index) {
             std::vector<int>& tuple = this->tuples[index];
             for(const int value : tuple) {
                 searchContext[value].erase(index);

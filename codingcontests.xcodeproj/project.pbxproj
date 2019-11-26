@@ -220,6 +220,9 @@
 		1C72D006238D7EE900EB7D35 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		1C72D00B238D7EF900EB7D35 /* solution.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = solution.h; sourceTree = "<group>"; };
 		1C72D00C238D84B100EB7D35 /* datautils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = datautils.h; sourceTree = "<group>"; };
+		1C72D00D238D8CF700EB7D35 /* solution.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = solution.h; sourceTree = "<group>"; };
+		1C72D00E238D8E1000EB7D35 /* solution.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = solution.h; sourceTree = "<group>"; };
+		1C72D00F238D8F0800EB7D35 /* solution.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = solution.h; sourceTree = "<group>"; };
 		1CD627D2238A6EC4003AD2B6 /* CFR602_1262A_Math */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = CFR602_1262A_Math; sourceTree = BUILT_PRODUCTS_DIR; };
 		1CD627D4238A6EC5003AD2B6 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		1CD627DD238A6ED1003AD2B6 /* CFR602_1262B_Box */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = CFR602_1262B_Box; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -383,6 +386,7 @@
 			isa = PBXGroup;
 			children = (
 				1C03215D2379BE9B000D95BA /* main.cpp */,
+				1C72D00E238D8E1000EB7D35 /* solution.h */,
 			);
 			path = LCW162_1253_Reconstruct;
 			sourceTree = "<group>";
@@ -524,6 +528,7 @@
 			isa = PBXGroup;
 			children = (
 				1CED5CE22379AE57007E9D8B /* main.cpp */,
+				1C72D00D238D8CF700EB7D35 /* solution.h */,
 			);
 			path = LCW162_1252_Cells;
 			sourceTree = "<group>";
@@ -541,6 +546,7 @@
 			isa = PBXGroup;
 			children = (
 				1CEECAF62383DB44004A99DE /* main.cpp */,
+				1C72D00F238D8F0800EB7D35 /* solution.h */,
 			);
 			path = CFR600_1253A_Single;
 			sourceTree = "<group>";

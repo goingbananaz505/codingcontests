@@ -6,7 +6,7 @@
 
 class Solution {
 public:
-    std::vector<int> getPermutation(std::vector<int> prefixMaximums) {
+    std::vector<int> getPermutation(const std::vector<int>& prefixMaximums) const {
         std::vector<int> p(prefixMaximums.size());
         std::vector<int> impossible = { -1 };
         
@@ -48,7 +48,7 @@ public:
         return p;
     }
 private:
-    std::vector<int> getMissingValues(std::vector<int> permutation) {
+    std::vector<int> getMissingValues(const std::vector<int>& permutation) const {
         std::unordered_set<int> elements;
         for(int i = 1; i <= permutation.size(); i++) {
             elements.insert(i);

@@ -39,11 +39,11 @@ public:
         return result;
     }
 private:
-    inline int indexToOrder(int index) const {
+    inline int indexToOrder(const int index) const {
         return index + 1;
     }
     
-    int findIndex(const std::string& s, int start, char toFind) const {
+    int findIndex(const std::string& s, const int start, const char toFind) const {
         for(int i = start; i < s.size(); i++) {
             char c = s[i];
             if(c == toFind) {

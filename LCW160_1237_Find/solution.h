@@ -2,7 +2,7 @@
 
 class CustomFunction {
 public:
-    int f(int x, int y) {
+    int f(int x, int y) const {
         return x + y;
     }
 };

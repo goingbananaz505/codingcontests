@@ -1,7 +1,7 @@
 #include <iostream>
 #include "solution.h"
 
-int main(int argc, const char * argv[]) {
+int main() {
     CustomFunction f; int z = 5;
     
     Solution s;

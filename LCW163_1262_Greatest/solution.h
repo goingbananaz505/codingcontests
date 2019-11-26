@@ -6,7 +6,7 @@
 
 class Solution {
 public:
-    int maxSumDivThree(std::vector<int>& nums) const {
+    int maxSumDivThree(const std::vector<int>& nums) const {
         std::vector<std::vector<int>> groups = getGroupedByModuloThree(nums);
         sortGroups(groups);
         const std::vector<int>& mod3Equals0 = groups[0];

@@ -28,7 +28,7 @@ private:
         }
         return col;
     }
-    void copyColumn(du::matrix<int>& grid, int destinationIndex, int sourceIndex) const {
+    void copyColumn(du::matrix<int>& grid, const int destinationIndex, const int sourceIndex) const {
         for(int i = 0; i < grid.size(); i++) {
             grid[i][destinationIndex] = grid[i][sourceIndex];
         }

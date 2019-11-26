@@ -34,7 +34,6 @@ private:
         }
     }
     
-    TreeNode* tree;
     std::unordered_set<int> elements;
 };
 
