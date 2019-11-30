@@ -10,6 +10,7 @@
 		1C03215E2379BE9B000D95BA /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1C03215D2379BE9B000D95BA /* main.cpp */; };
 		1C0321692379C247000D95BA /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1C0321682379C247000D95BA /* main.cpp */; };
 		1C5F44CB2391B3E500F8539E /* ECFR77_1260B_Obtain.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1C5F44CA2391B3E500F8539E /* ECFR77_1260B_Obtain.mm */; };
+		1C5F44CE2392529700F8539E /* ECFR77_1260C_Infinite.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1C5F44CD2392529700F8539E /* ECFR77_1260C_Infinite.mm */; };
 		1C72CFD6238D6E7800EB7D35 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1C72CFD5238D6E7800EB7D35 /* main.cpp */; };
 		1C72CFE2238D704900EB7D35 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1C72CFE1238D704900EB7D35 /* main.cpp */; };
 		1C72CFEE238D72F800EB7D35 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1C72CFED238D72F800EB7D35 /* main.cpp */; };
@@ -232,6 +233,8 @@
 		1C03216D2379CA13000D95BA /* solution.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = solution.h; sourceTree = "<group>"; };
 		1C5F44CA2391B3E500F8539E /* ECFR77_1260B_Obtain.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ECFR77_1260B_Obtain.mm; sourceTree = "<group>"; };
 		1C5F44CC2391B4CD00F8539E /* solution.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = solution.h; sourceTree = "<group>"; };
+		1C5F44CD2392529700F8539E /* ECFR77_1260C_Infinite.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ECFR77_1260C_Infinite.mm; sourceTree = "<group>"; };
+		1C5F44CF239252DC00F8539E /* solution.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = solution.h; sourceTree = "<group>"; };
 		1C72CFCA238D359B00EB7D35 /* solution.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = solution.h; sourceTree = "<group>"; };
 		1C72CFCB238D3F9C00EB7D35 /* solution.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = solution.h; sourceTree = "<group>"; };
 		1C72CFCC238D503F00EB7D35 /* solution.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = solution.h; sourceTree = "<group>"; };
@@ -540,6 +543,7 @@
 			isa = PBXGroup;
 			children = (
 				1CB3C399238EAF9A004E797F /* main.cpp */,
+				1C5F44CF239252DC00F8539E /* solution.h */,
 			);
 			path = ECFR77_1260C_Infinite;
 			sourceTree = "<group>";
@@ -549,6 +553,7 @@
 			children = (
 				1CB3C41E238FAEB3004E797F /* ECFR77_1260A_Heating.mm */,
 				1C5F44CA2391B3E500F8539E /* ECFR77_1260B_Obtain.mm */,
+				1C5F44CD2392529700F8539E /* ECFR77_1260C_Infinite.mm */,
 				1CB3C420238FAEB3004E797F /* Info.plist */,
 			);
 			path = Tests;
@@ -1310,6 +1315,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1C5F44CB2391B3E500F8539E /* ECFR77_1260B_Obtain.mm in Sources */,
+				1C5F44CE2392529700F8539E /* ECFR77_1260C_Infinite.mm in Sources */,
 				1CB3C41F238FAEB3004E797F /* ECFR77_1260A_Heating.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
