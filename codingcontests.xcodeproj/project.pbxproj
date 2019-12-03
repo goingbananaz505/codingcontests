@@ -13,6 +13,8 @@
 		1C5F44CE2392529700F8539E /* ECFR77_1260C_Infinite.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1C5F44CD2392529700F8539E /* ECFR77_1260C_Infinite.mm */; };
 		1C5F44D723926DF700F8539E /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1C5F44D623926DF700F8539E /* main.cpp */; };
 		1C5F44DC23926E5500F8539E /* LCW120_979_Distribute.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1C5F44DB23926E5500F8539E /* LCW120_979_Distribute.mm */; };
+		1C5F44E52396C06D00F8539E /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1C5F44E42396C06D00F8539E /* main.cpp */; };
+		1C5F44EB2396D5B400F8539E /* DRT19_BB_Stricat.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1C5F44EA2396D5B400F8539E /* DRT19_BB_Stricat.mm */; };
 		1C72CFD6238D6E7800EB7D35 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1C72CFD5238D6E7800EB7D35 /* main.cpp */; };
 		1C72CFE2238D704900EB7D35 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1C72CFE1238D704900EB7D35 /* main.cpp */; };
 		1C72CFEE238D72F800EB7D35 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1C72CFED238D72F800EB7D35 /* main.cpp */; };
@@ -55,6 +57,15 @@
 			runOnlyForDeploymentPostprocessing = 1;
 		};
 		1C5F44D223926DF600F8539E /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+		1C5F44E02396C06D00F8539E /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = /usr/share/man/man1/;
@@ -250,6 +261,10 @@
 		1C5F44D623926DF700F8539E /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		1C5F44DB23926E5500F8539E /* LCW120_979_Distribute.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = LCW120_979_Distribute.mm; sourceTree = "<group>"; };
 		1C5F44DD23926E9E00F8539E /* solution.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = solution.h; sourceTree = "<group>"; };
+		1C5F44E22396C06D00F8539E /* DRT19_BB_Stricat */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = DRT19_BB_Stricat; sourceTree = BUILT_PRODUCTS_DIR; };
+		1C5F44E42396C06D00F8539E /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		1C5F44E92396C09C00F8539E /* solution.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = solution.h; sourceTree = "<group>"; };
+		1C5F44EA2396D5B400F8539E /* DRT19_BB_Stricat.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = DRT19_BB_Stricat.mm; sourceTree = "<group>"; };
 		1C72CFCA238D359B00EB7D35 /* solution.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = solution.h; sourceTree = "<group>"; };
 		1C72CFCB238D3F9C00EB7D35 /* solution.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = solution.h; sourceTree = "<group>"; };
 		1C72CFCC238D503F00EB7D35 /* solution.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = solution.h; sourceTree = "<group>"; };
@@ -330,6 +345,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		1C5F44D123926DF600F8539E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1C5F44DF2396C06D00F8539E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -506,6 +528,15 @@
 			path = LCW120_979_Distribute;
 			sourceTree = "<group>";
 		};
+		1C5F44E32396C06D00F8539E /* DRT19_BB_Stricat */ = {
+			isa = PBXGroup;
+			children = (
+				1C5F44E42396C06D00F8539E /* main.cpp */,
+				1C5F44E92396C09C00F8539E /* solution.h */,
+			);
+			path = DRT19_BB_Stricat;
+			sourceTree = "<group>";
+		};
 		1C72CFD4238D6E7800EB7D35 /* LCW164_1266_Minimum */ = {
 			isa = PBXGroup;
 			children = (
@@ -581,6 +612,7 @@
 		1CB3C41D238FAEB3004E797F /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				1C5F44EA2396D5B400F8539E /* DRT19_BB_Stricat.mm */,
 				1CB3C41E238FAEB3004E797F /* ECFR77_1260A_Heating.mm */,
 				1C5F44CA2391B3E500F8539E /* ECFR77_1260B_Obtain.mm */,
 				1C5F44CD2392529700F8539E /* ECFR77_1260C_Infinite.mm */,
@@ -629,6 +661,7 @@
 				1CD627D3238A6EC5003AD2B6 /* CFR602_1262A_Math */,
 				1CD627DE238A6ED1003AD2B6 /* CFR602_1262B_Box */,
 				1CD627E9238A6EDD003AD2B6 /* CFR602_1262C_Messy */,
+				1C5F44E32396C06D00F8539E /* DRT19_BB_Stricat */,
 				1CB3C382238EAF7B004E797F /* ECFR77_1260A_Heating */,
 				1CB3C38D238EAF89004E797F /* ECFR77_1260B_Obtain */,
 				1CB3C398238EAF9A004E797F /* ECFR77_1260C_Infinite */,
@@ -674,6 +707,7 @@
 				1CB3C397238EAF9A004E797F /* ECFR77_1260C_Infinite */,
 				1CB3C41C238FAEB3004E797F /* Tests.xctest */,
 				1C5F44D423926DF600F8539E /* LCW120_979_Distribute */,
+				1C5F44E22396C06D00F8539E /* DRT19_BB_Stricat */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -812,6 +846,23 @@
 			name = LCW120_979_Distribute;
 			productName = LCW120_979_Distribute;
 			productReference = 1C5F44D423926DF600F8539E /* LCW120_979_Distribute */;
+			productType = "com.apple.product-type.tool";
+		};
+		1C5F44E12396C06D00F8539E /* DRT19_BB_Stricat */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1C5F44E62396C06D00F8539E /* Build configuration list for PBXNativeTarget "DRT19_BB_Stricat" */;
+			buildPhases = (
+				1C5F44DE2396C06D00F8539E /* Sources */,
+				1C5F44DF2396C06D00F8539E /* Frameworks */,
+				1C5F44E02396C06D00F8539E /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DRT19_BB_Stricat;
+			productName = DRT19_B2_Stricat;
+			productReference = 1C5F44E22396C06D00F8539E /* DRT19_BB_Stricat */;
 			productType = "com.apple.product-type.tool";
 		};
 		1C72CFD2238D6E7800EB7D35 /* LCW164_1266_Minimum */ = {
@@ -1172,6 +1223,9 @@
 					1C5F44D323926DF600F8539E = {
 						CreatedOnToolsVersion = 11.2.1;
 					};
+					1C5F44E12396C06D00F8539E = {
+						CreatedOnToolsVersion = 11.2.1;
+					};
 					1C72CFD2238D6E7800EB7D35 = {
 						CreatedOnToolsVersion = 11.2.1;
 					};
@@ -1256,6 +1310,7 @@
 				1CD627D1238A6EC4003AD2B6 /* CFR602_1262A_Math */,
 				1CD627DC238A6ED1003AD2B6 /* CFR602_1262B_Box */,
 				1CD627E7238A6EDD003AD2B6 /* CFR602_1262C_Messy */,
+				1C5F44E12396C06D00F8539E /* DRT19_BB_Stricat */,
 				1CB3C380238EAF7B004E797F /* ECFR77_1260A_Heating */,
 				1CB3C38B238EAF89004E797F /* ECFR77_1260B_Obtain */,
 				1CB3C396238EAF9A004E797F /* ECFR77_1260C_Infinite */,
@@ -1306,6 +1361,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				1C5F44D723926DF700F8539E /* main.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1C5F44DE2396C06D00F8539E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1C5F44E52396C06D00F8539E /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1379,6 +1442,7 @@
 			files = (
 				1C5F44CB2391B3E500F8539E /* ECFR77_1260B_Obtain.mm in Sources */,
 				1C5F44DC23926E5500F8539E /* LCW120_979_Distribute.mm in Sources */,
+				1C5F44EB2396D5B400F8539E /* DRT19_BB_Stricat.mm in Sources */,
 				1C5F44CE2392529700F8539E /* ECFR77_1260C_Infinite.mm in Sources */,
 				1CB3C41F238FAEB3004E797F /* ECFR77_1260A_Heating.mm in Sources */,
 			);
@@ -1478,6 +1542,7 @@
 		1C0321602379BE9B000D95BA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5968Q4J34P;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -1488,6 +1553,7 @@
 		1C0321612379BE9B000D95BA /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5968Q4J34P;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -1498,6 +1564,7 @@
 		1C03216B2379C247000D95BA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5968Q4J34P;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -1508,6 +1575,7 @@
 		1C03216C2379C247000D95BA /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5968Q4J34P;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -1518,7 +1586,7 @@
 		1C5F44D923926DF700F8539E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5968Q4J34P;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -1529,7 +1597,29 @@
 		1C5F44DA23926DF700F8539E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5968Q4J34P;
+				ENABLE_HARDENED_RUNTIME = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		1C5F44E72396C06D00F8539E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5968Q4J34P;
+				ENABLE_HARDENED_RUNTIME = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		1C5F44E82396C06D00F8539E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5968Q4J34P;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -1540,6 +1630,7 @@
 		1C72CFD8238D6E7800EB7D35 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5968Q4J34P;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -1550,6 +1641,7 @@
 		1C72CFD9238D6E7800EB7D35 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5968Q4J34P;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -1560,6 +1652,7 @@
 		1C72CFE4238D704900EB7D35 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5968Q4J34P;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -1570,6 +1663,7 @@
 		1C72CFE5238D704900EB7D35 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5968Q4J34P;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -1580,6 +1674,7 @@
 		1C72CFF0238D72F800EB7D35 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5968Q4J34P;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -1590,6 +1685,7 @@
 		1C72CFF1238D72F800EB7D35 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5968Q4J34P;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -1600,7 +1696,7 @@
 		1C72CFFC238D7A9B00EB7D35 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5968Q4J34P;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -1611,7 +1707,7 @@
 		1C72CFFD238D7A9B00EB7D35 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5968Q4J34P;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -1622,7 +1718,7 @@
 		1C72D009238D7EE900EB7D35 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5968Q4J34P;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -1633,7 +1729,7 @@
 		1C72D00A238D7EE900EB7D35 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5968Q4J34P;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -1644,7 +1740,7 @@
 		1CB3C385238EAF7B004E797F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5968Q4J34P;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -1655,7 +1751,7 @@
 		1CB3C386238EAF7B004E797F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5968Q4J34P;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -1666,7 +1762,7 @@
 		1CB3C391238EAF89004E797F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5968Q4J34P;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -1677,7 +1773,7 @@
 		1CB3C392238EAF89004E797F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5968Q4J34P;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -1688,7 +1784,7 @@
 		1CB3C39C238EAF9A004E797F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5968Q4J34P;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -1699,7 +1795,7 @@
 		1CB3C39D238EAF9A004E797F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5968Q4J34P;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -1710,7 +1806,7 @@
 		1CB3C425238FAEB3004E797F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 5968Q4J34P;
@@ -1728,7 +1824,7 @@
 		1CB3C426238FAEB3004E797F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 5968Q4J34P;
@@ -1746,6 +1842,7 @@
 		1CD627D7238A6EC5003AD2B6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -1757,6 +1854,7 @@
 		1CD627D8238A6EC5003AD2B6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -1768,6 +1866,7 @@
 		1CD627E2238A6ED1003AD2B6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -1779,6 +1878,7 @@
 		1CD627E3238A6ED1003AD2B6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -1790,6 +1890,7 @@
 		1CD627ED238A6EDD003AD2B6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -1801,6 +1902,7 @@
 		1CD627EE238A6EDD003AD2B6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -1943,6 +2045,7 @@
 		1CEECAF92383DB44004A99DE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5968Q4J34P;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -1953,6 +2056,7 @@
 		1CEECAFA2383DB44004A99DE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5968Q4J34P;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -1963,6 +2067,7 @@
 		1CEECB042383E553004A99DE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5968Q4J34P;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -1973,6 +2078,7 @@
 		1CEECB052383E553004A99DE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5968Q4J34P;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -1983,6 +2089,7 @@
 		1CEECB10238433B8004A99DE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5968Q4J34P;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -1993,6 +2100,7 @@
 		1CEECB11238433B8004A99DE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5968Q4J34P;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -2003,6 +2111,7 @@
 		1CEECB1B238433D4004A99DE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5968Q4J34P;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -2013,6 +2122,7 @@
 		1CEECB1C238433D4004A99DE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5968Q4J34P;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -2023,6 +2133,7 @@
 		1CEECB26238433E2004A99DE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5968Q4J34P;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -2033,6 +2144,7 @@
 		1CEECB27238433E2004A99DE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5968Q4J34P;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -2043,6 +2155,7 @@
 		1CEECB31238433F1004A99DE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5968Q4J34P;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -2053,6 +2166,7 @@
 		1CEECB32238433F1004A99DE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5968Q4J34P;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -2063,6 +2177,7 @@
 		1CEECB3E238A2A53004A99DE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -2074,6 +2189,7 @@
 		1CEECB3F238A2A53004A99DE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -2108,6 +2224,15 @@
 			buildConfigurations = (
 				1C5F44D923926DF700F8539E /* Debug */,
 				1C5F44DA23926DF700F8539E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1C5F44E62396C06D00F8539E /* Build configuration list for PBXNativeTarget "DRT19_BB_Stricat" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1C5F44E72396C06D00F8539E /* Debug */,
+				1C5F44E82396C06D00F8539E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
