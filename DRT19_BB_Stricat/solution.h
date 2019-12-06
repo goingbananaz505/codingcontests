@@ -5,24 +5,24 @@
 
 class Solution {
 public:
-    int getPresentRedistributionCost(const std::vector<int>& inorder) const {
-        TreeNode* root = deserializeTree(inorder);
+    int getPresentRedistributionCost(const std::vector<int>& preorder) const {
+        TreeNode* root = deserializeTree(preorder);
         return getPresentRedistributionCost(root);
     }
     
 private:
-    TreeNode* deserializeTree(const std::vector<int>& inorder) const {
+    TreeNode* deserializeTree(const std::vector<int>& preorder) const {
         int startIndex = 0;
-        TreeNode* root = deserializeTree(inorder, startIndex);
+        TreeNode* root = deserializeTree(preorder, startIndex);
         return root;
     }
-    TreeNode* deserializeTree(const std::vector<int>& inorder, int& fromIndex) const {
-        if(fromIndex < inorder.size()) {
-            int value = inorder[fromIndex];
+    TreeNode* deserializeTree(const std::vector<int>& preorder, int& fromIndex) const {
+        if(fromIndex < preorder.size()) {
+            int value = preorder[fromIndex];
             if(value != -1) {
                 TreeNode* node = new TreeNode(value);
-                node->left = deserializeTree(inorder, ++fromIndex);
-                node->right = deserializeTree(inorder, ++fromIndex);
+                node->left = deserializeTree(preorder, ++fromIndex);
+                node->right = deserializeTree(preorder, ++fromIndex);
                 return node;
             }
         }
