@@ -1,7 +1,7 @@
 #include <iostream>
 #include <vector>
 #include "solution.h"
-#include "consoleutils.h"
+#include "../Utils/consoleutils.h"
 
 Solution s;
 int main() {

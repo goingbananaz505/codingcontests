@@ -1,7 +1,7 @@
 #include <iostream>
 #include <vector>
-#include "consoleutils.h"
-#include "datautils.h"
+#include "../Utils/consoleutils.h"
+#include "../Utils/datautils.h"
 #include "solution.h"
 
 using namespace std;

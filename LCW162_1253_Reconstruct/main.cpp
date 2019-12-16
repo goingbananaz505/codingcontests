@@ -1,7 +1,7 @@
 #include <iostream>
 #include <vector>
 #include "solution.h"
-#include "datautils.h"
+#include "../Utils/datautils.h"
 
 namespace du = datautils;
 using namespace std;

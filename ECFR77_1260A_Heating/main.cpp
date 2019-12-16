@@ -1,5 +1,5 @@
 #include <iostream>
-#include "consoleutils.h"
+#include "../Utils/consoleutils.h"
 #include "solution.h"
 
 int main() {
