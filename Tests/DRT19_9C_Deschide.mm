@@ -75,7 +75,7 @@
         slide(100000001, 1000000000),
         slide(0, 100000000)
     };
-    std::vector<int> expected = { 1, 1, 0, 0, 1 };
+    std::vector<int> expected = { 1, 1, 0, 1, 1 };
     
     [self evaluateTest: segments : slides : expected];
 }
