@@ -18,6 +18,7 @@ class CppMerger:
             self.__beautify_code()
         self.__save_merged_file()
         self.__test_correctness_of_merged_file()
+        self.__copy_file_content_to_clipboard()
 
     @staticmethod
     def __get_abspath(file_path):
@@ -56,6 +57,12 @@ class CppMerger:
                        stdout=subprocess.PIPE)
         if os.path.exists(outfile_path):
             os.remove(outfile_path)
+
+    def __copy_file_content_to_clipboard(self):
+        process = subprocess.Popen(
+            'pbcopy', env={'LANG': 'en_US.UTF-8'}, stdin=subprocess.PIPE)
+        output = '\n'.join(self.__code_lines)
+        process.communicate(output.encode('utf-8'))
 
     @staticmethod
     def __get_root_directory_name_from_file_path(file_path):
